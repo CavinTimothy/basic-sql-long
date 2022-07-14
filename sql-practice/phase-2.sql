@@ -7,11 +7,11 @@ CREATE TABLE customers (
   phone numeric(10) UNIQUE,
   email varchar(255) UNIQUE,
   points INTEGER NOT NULL DEFAULT 5,
-  created_at CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE coffee_orders (
   id INTEGER PRIMARY KEY,
   is_redeemed boolean DEFAULT false,
-  ordered_at CURRENT_TIMESTAMP
+  ordered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
